@@ -19,6 +19,16 @@ const FileManager = () => {
     getFileDataFromBackend();
   }, [])
 
+  const deleteFile = async (id) => { 
+    console.log(id);
+    const response = await fetch(url+'/file/delete/'+id, {method : 'DELETE'})
+    if(response.status === 200){
+        console.log('user deleted');
+        // toast.success('User Deleted 😎');
+        getFileDataFromBackend();
+    }
+ }
+
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -128,7 +138,7 @@ const FileManager = () => {
               {new Date(file.createdAt).toLocaleDateString()}
             </p>
             <button type="button" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">Add</button>
-            <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark">Delete</button>
+            <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark" onClick={ () => { deleteFile(file._id) }}>Delete</button>
           </div>
         </div>
       </div>
