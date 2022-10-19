@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Register = () => {
     return (
@@ -20,7 +20,7 @@ const Register = () => {
                                                     <input
                                                         type="text"
                                                         id="form3Example1c"
-                                                        className="form-control"
+                                                        className="form-control border"
                                                     />
                                                     <label className="form-label" htmlFor="form3Example1c">
                                                         Your Name
@@ -33,7 +33,7 @@ const Register = () => {
                                                     <input
                                                         type="email"
                                                         id="form3Example3c"
-                                                        className="form-control"
+                                                        className="form-control border"
                                                     />
                                                     <label className="form-label" htmlFor="form3Example3c">
                                                         Your Email
@@ -46,7 +46,7 @@ const Register = () => {
                                                     <input
                                                         type="password"
                                                         id="form3Example4c"
-                                                        className="form-control"
+                                                        className="form-control border"
                                                     />
                                                     <label className="form-label" htmlFor="form3Example4c">
                                                         Password
@@ -59,10 +59,10 @@ const Register = () => {
                                                     <input
                                                         type="password"
                                                         id="form3Example4cd"
-                                                        className="form-control"
+                                                        className="form-control border"
                                                     />
                                                     <label className="form-label" htmlFor="form3Example4cd">
-                                                        Repeat your password
+                                                        Confirm password
                                                     </label>
                                                 </div>
                                             </div>

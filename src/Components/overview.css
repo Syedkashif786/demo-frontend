@@ -1,0 +1,66 @@
+.box {
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 81px;
+}
+.box img{
+    height: 350px;
+    /* width:500px */
+    position: absolute;
+    right: 90px;
+    top: 200px;
+}
+.box h1 {
+    font-size: 60px;
+    padding-bottom: 8px;
+}
+
+.box p {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.box button {
+    margin: 0px 20px 0px 0px;
+}
+.navbar{
+    background-color: #f1f0eb;
+}
+
+.heading h4 {
+    position: relative;
+    right: 35px;
+    top: 5px;
+    font-family: pacifico;
+}
+.heading img{
+    height: 40px;
+    position: relative;
+    right: 45px;
+}
+.nav-item2 {
+    position: absolute;
+    right: 220px;
+}
+
+.nav-item3 {
+    position: absolute;
+    right: 145px;
+}
+.form-outline{
+    width: 430px;
+    
+}
+.form-outline input{
+    border-radius: 13px;
+    height: 45px;
+}
+.form button{
+    width: 430px;
+    border-radius: 13px;
+    height: 45px;
+}
+.form-1 h2{
+    color: #ef705a;
+}
+

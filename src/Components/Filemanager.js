@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import "./manager.css";
 
 const FileManager = () => {
 
@@ -19,15 +20,15 @@ const FileManager = () => {
     getFileDataFromBackend();
   }, [])
 
-  const deleteFile = async (id) => { 
+  const deleteFile = async (id) => {
     console.log(id);
-    const response = await fetch(url+'/file/delete/'+id, {method : 'DELETE'})
-    if(response.status === 200){
-        console.log('user deleted');
-        // toast.success('User Deleted 😎');
-        getFileDataFromBackend();
+    const response = await fetch(url + '/file/delete/' + id, { method: 'DELETE' })
+    if (response.status === 200) {
+      console.log('user deleted');
+      // toast.success('User Deleted 😎');
+      getFileDataFromBackend();
     }
- }
+  }
 
 
   const uploadFile = (e) => {
@@ -82,7 +83,6 @@ const FileManager = () => {
                 });
               }
             })
-
           })
 
       } else {
@@ -131,14 +131,14 @@ const FileManager = () => {
     return fileList.map(file => (
       <div class="col">
         <div class="card h-100">
-          <img src={file.thumbnail} class="card-img-top" alt="Hollywood Sign on The Hill" />
+          <img src={file.thumbnail} class="card-img-top" alt="No Preview" />
           <div class="card-body">
             <h5 class="card-title">{file.file}</h5>
             <p class="card-text">
               {new Date(file.createdAt).toLocaleDateString()}
             </p>
-            <button type="button" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">Add</button>
-            <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark" onClick={ () => { deleteFile(file._id) }}>Delete</button>
+            {/* <button type="button" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">Add</button> */}
+            <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark" onClick={() => { deleteFile(file._id) }}>Delete</button>
           </div>
         </div>
       </div>
@@ -149,9 +149,9 @@ const FileManager = () => {
   return (
 
     <div className='container'>
-      <div className="card">
         <div className="card-body">
-          <input className='form-control' onChange={uploadFile} type="file" />
+      <div className="card">
+          <input className='form-control text-black' onChange={uploadFile} type="file" />
           <br />
           <div class="container text-center">
             <div class="row row-cols-1 row-cols-md-4 g-4">
