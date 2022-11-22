@@ -156,8 +156,8 @@ const FileManager = () => {
   return (
     <div className="container">
       <div className="card-body">
-        <div className="card">
-          <input className="form-control text-black" onChange={uploadFile} type="file" />
+        <div className="card mt-3">
+          <input className="form-control text-black mb-3 p-2" onChange={uploadFile} type="file" />
           <br />
           {loading ? (
             <img src="https://cdn.dribbble.com/users/4241225/screenshots/14521747/media/d9d6f50e1443ecbdef32497685c0b5eb.gif" alt="" />
